@@ -1,11 +1,57 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
+<footer class="mt-auto py-14" style="background-color: #1B2A4A;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Untitled Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Untitled Business. All rights reserved.</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12" style="border-bottom: 1px solid rgba(255,255,255,0.10);">
+
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-1">
+        <a href="/" class="flex items-center gap-0 select-none">
+          <span class="text-xl font-bold tracking-tight font-display text-white">Clai</span><span class="text-xl font-bold tracking-tight font-display" style="color: #00C9A7;">ro</span>
+        </a>
+        <p class="mt-3 text-sm leading-relaxed max-w-xs" style="color: rgba(255,255,255,0.55);">
+          Find AI that works for business. The only directory built for enterprise and SMB purchasing teams.
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.40);">Product</h4>
+        <ul class="space-y-3 text-sm" style="color: rgba(255,255,255,0.60);">
+          <li><a href="#categories" class="hover:text-white transition-colors duration-150">Browse Tools</a></li>
+          <li><a href="#categories" class="hover:text-white transition-colors duration-150">Categories</a></li>
+          <li><a href="#features"   class="hover:text-white transition-colors duration-150">For Enterprise</a></li>
+          <li><a href="#pricing"    class="hover:text-white transition-colors duration-150">Pricing</a></li>
+          <li><a href="/blog"       class="hover:text-white transition-colors duration-150">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.40);">Company</h4>
+        <ul class="space-y-3 text-sm" style="color: rgba(255,255,255,0.60);">
+          <li><a href="#"                              class="hover:text-white transition-colors duration-150">About</a></li>
+          <li><a href="#newsletter"                    class="hover:text-white transition-colors duration-150">Newsletter</a></li>
+          <li><a href="mailto:enterprise@clairo.io"    class="hover:text-white transition-colors duration-150">Enterprise Sales</a></li>
+          <li><a href="mailto:hello@clairo.io"         class="hover:text-white transition-colors duration-150">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.40);">Legal</h4>
+        <ul class="space-y-3 text-sm" style="color: rgba(255,255,255,0.60);">
+          <li><a href="#" class="hover:text-white transition-colors duration-150">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-150">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <p class="text-sm" style="color: rgba(255,255,255,0.35);">&copy; {year} Clairo. All rights reserved.</p>
+      <p class="text-sm" style="color: rgba(255,255,255,0.35);">Find AI that works for business.</p>
     </div>
   </div>
 </footer>

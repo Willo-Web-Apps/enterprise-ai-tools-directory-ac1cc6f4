@@ -1,35 +1,535 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Untitled Business" description="amazing high quality ai tool directory specifically for enterprise businesses and SMBs">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Untitled Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        amazing high quality ai tool directory specifically for enterprise businesses and SMBs
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
+<Base
+  title="Clairo — Find AI that works for business"
+  description="Clairo is the only AI tool directory built for enterprise and SMB teams — curated, vetted, and filtered by business outcomes, compliance, and ROI."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       1. HERO SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[88vh] flex items-center overflow-hidden" style="background: linear-gradient(140deg, #1B2A4A 0%, #162035 55%, #0e1827 100%);">
+    <!-- Subtle grid overlay -->
+    <div class="absolute inset-0 opacity-[0.025]" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <!-- Teal glow blobs -->
+    <div class="absolute top-[-80px] right-[-60px] w-[480px] h-[480px] rounded-full pointer-events-none" style="background: radial-gradient(circle at center, rgba(0,201,167,0.12), transparent 65%);"></div>
+    <div class="absolute bottom-[-60px] left-[-40px] w-[320px] h-[320px] rounded-full pointer-events-none" style="background: radial-gradient(circle at center, rgba(0,201,167,0.07), transparent 65%);"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <!-- Left: copy -->
+        <div class="animate-slide-up">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-7 text-sm font-medium" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.80);">
+            <span class="w-2 h-2 rounded-full animate-pulse-dot" style="background-color: #00C9A7;"></span>
+            The AI directory built for business purchasing teams
+          </div>
+
+          <!-- H1 -->
+          <h1 class="text-5xl md:text-6xl lg:text-[4.25rem] font-bold tracking-tight leading-[1.05] font-display text-white">
+            Find AI that<br>
+            <span style="color: #00C9A7;">works for business.</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="mt-6 text-lg leading-relaxed max-w-xl" style="color: rgba(255,255,255,0.68);">
+            Clairo is the only AI tool directory built for enterprise and SMB teams — curated, vetted, and filtered by business outcomes, compliance, and ROI.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-9 flex flex-col sm:flex-row gap-3 animate-slide-up delay-200">
+            <a href="#categories" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-white text-sm transition-opacity duration-150 hover:opacity-85" style="background-color: #00C9A7;">
+              Explore AI Tools
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+              </svg>
+            </a>
+            <a href="#pricing" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-semibold text-white text-sm transition-all duration-150" style="border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.05);">
+              Request Enterprise Brief
+            </a>
+          </div>
+
+          <!-- Trust bar -->
+          <div class="mt-12 animate-slide-up delay-300">
+            <p class="text-xs font-medium uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.35);">Trusted by forward-thinking teams at</p>
+            <div class="flex flex-wrap items-center gap-x-7 gap-y-2">
+              <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.28);">Meridian Group</span>
+              <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.28);">Apex Partners</span>
+              <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.28);">Vantage Co.</span>
+              <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.28);">Crest Digital</span>
+              <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.28);">Orion Works</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: mock tool cards -->
+        <div class="hidden lg:block relative h-[460px] animate-fade-in delay-400">
+
+          <!-- Card 1 -->
+          <div class="absolute top-0 left-6 right-0 bg-white rounded-2xl shadow-2xl p-4" style="border: 1px solid rgba(0,0,0,0.07);">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm text-white shrink-0" style="background: linear-gradient(135deg,#4F46E5,#7C3AED);">S</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-sm font-bold" style="color: #1B2A4A;">SalesGPT Pro</span>
+                  <span class="text-xs px-2 py-0.5 rounded-full font-medium text-white" style="background-color: #1B2A4A;">Sales &amp; CRM</span>
+                  <span class="flex items-center gap-1 text-xs font-semibold" style="color: #00C9A7;">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                    Clairo Verified
+                  </span>
+                </div>
+                <p class="text-xs mt-1.5 leading-relaxed" style="color: #64748b;">AI-powered sales assistant that automates pipeline management and outreach sequences.</p>
+                <div class="mt-2.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold" style="background:#F0FDF9; color:#065F46;">📊 Saves 6.5 hrs/week per rep · SOC2 Certified</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="absolute bg-white rounded-2xl shadow-2xl p-4" style="top:152px; left:0; right:0; border: 1px solid rgba(0,0,0,0.07);">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm text-white shrink-0" style="background: linear-gradient(135deg,#0284C7,#0EA5E9);">F</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-sm font-bold" style="color: #1B2A4A;">FinanceAI Suite</span>
+                  <span class="text-xs px-2 py-0.5 rounded-full font-medium text-white" style="background-color: #1B2A4A;">Finance</span>
+                  <span class="flex items-center gap-1 text-xs font-semibold" style="color: #00C9A7;">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                    Clairo Verified
+                  </span>
+                </div>
+                <p class="text-xs mt-1.5 leading-relaxed" style="color: #64748b;">Automates financial reporting, forecasting, and anomaly detection for mid-market teams.</p>
+                <div class="mt-2.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold" style="background:#F0FDF9; color:#065F46;">📊 Cuts close cycle by 40% · HIPAA + SOC2</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="absolute bg-white rounded-2xl shadow-2xl p-4" style="top:304px; left:6px; right:0; border: 1px solid rgba(0,0,0,0.07);">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm text-white shrink-0" style="background: linear-gradient(135deg,#B45309,#D97706);">H</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-sm font-bold" style="color: #1B2A4A;">HireIQ</span>
+                  <span class="text-xs px-2 py-0.5 rounded-full font-medium text-white" style="background-color: #1B2A4A;">HR &amp; Recruiting</span>
+                  <span class="flex items-center gap-1 text-xs font-semibold" style="color: #00C9A7;">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                    Clairo Verified
+                  </span>
+                </div>
+                <p class="text-xs mt-1.5 leading-relaxed" style="color: #64748b;">Screens candidates, schedules interviews, and generates structured feedback at scale.</p>
+                <div class="mt-2.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold" style="background:#F0FDF9; color:#065F46;">📊 Cuts time-to-hire by 52% · GDPR Compliant</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       2. PROBLEM SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">The AI tools landscape is overwhelming.</h2>
+        <p class="mt-4 text-lg text-surface-600 max-w-2xl mx-auto leading-relaxed">
+          Most directories were built for developers or early adopters. Clairo was built for business.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-3xl mb-4">🌊</div>
+          <h3 class="text-lg font-bold mb-2 font-display" style="color: #1B2A4A;">Too much noise</h3>
+          <p class="text-surface-600 leading-relaxed text-sm">10,000+ AI tools and counting. Consumer directories list everything. You need what actually works for your business.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-3xl mb-4">🔒</div>
+          <h3 class="text-lg font-bold mb-2 font-display" style="color: #1B2A4A;">No enterprise vetting</h3>
+          <p class="text-surface-600 leading-relaxed text-sm">Most directories have zero compliance metadata. No SOC2, no HIPAA, no pricing transparency. That's a procurement nightmare.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-3xl mb-4">📉</div>
+          <h3 class="text-lg font-bold mb-2 font-display" style="color: #1B2A4A;">No ROI context</h3>
+          <p class="text-surface-600 leading-relaxed text-sm">Feature lists don't tell you if a tool will save your team 5 hours a week or cost you more than it saves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       3. HOW CLAIRO WORKS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white" id="how-it-works">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">The smarter way to find business AI.</h2>
+        <p class="mt-4 text-lg text-surface-600 max-w-2xl mx-auto leading-relaxed">Three steps from search to confident decision.</p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="rounded-2xl p-7 border border-surface-200 bg-surface-50">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background-color: #1B2A4A;">1</span>
+            <h3 class="font-bold text-base font-display" style="color: #1B2A4A;">Tell us your goal</h3>
+          </div>
+          <p class="text-surface-600 text-sm leading-relaxed">Search by business outcome: reduce costs, automate operations, accelerate sales, or improve customer support.</p>
+        </div>
+        <div class="rounded-2xl p-7 bg-surface-50" style="border: 2px solid #00C9A7;">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background-color: #00C9A7;">2</span>
+            <h3 class="font-bold text-base font-display" style="color: #1B2A4A;">Browse vetted tools</h3>
+          </div>
+          <p class="text-surface-600 text-sm leading-relaxed">Every listing includes compliance certs, pricing tiers, integrations, and real-world ROI benchmarks from comparable teams.</p>
+        </div>
+        <div class="rounded-2xl p-7 border border-surface-200 bg-surface-50">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0" style="background-color: #1B2A4A;">3</span>
+            <h3 class="font-bold text-base font-display" style="color: #1B2A4A;">Build your stack</h3>
+          </div>
+          <p class="text-surface-600 text-sm leading-relaxed">Save tools to collections, compare options side-by-side, and share your vetted AI stack with your team or procurement lead.</p>
+        </div>
+      </div>
+
+      <!-- Search/filter UI mockup -->
+      <div class="max-w-3xl mx-auto rounded-2xl border border-surface-200 bg-white shadow-sm overflow-hidden">
+        <div class="px-5 py-4 border-b border-surface-200 flex items-center gap-3">
+          <svg class="w-4 h-4 shrink-0 text-surface-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z"/></svg>
+          <span class="text-sm text-surface-400">Search by outcome, tool name, or category…</span>
+        </div>
+        <div class="px-5 py-3 flex flex-wrap gap-2 border-b border-surface-200 bg-surface-50">
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-white" style="background-color: #1B2A4A;">All Categories</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">Operations</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">Sales</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">Marketing</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">HR</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">Finance</span>
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-medium text-surface-600 border border-surface-200 bg-white cursor-pointer">IT</span>
+        </div>
+        <div class="divide-y divide-surface-100">
+          <div class="px-5 py-3.5 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg shrink-0 flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#4F46E5,#7C3AED);">S</div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-sm font-semibold" style="color:#1B2A4A;">SalesGPT Pro</span>
+                <span class="text-xs text-surface-400">Sales &amp; CRM</span>
+              </div>
+              <span class="text-xs text-surface-500">Automates pipeline management · Saves 6.5 hrs/week</span>
+            </div>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#F0FDF9; color:#00C9A7;">✓ Verified</span>
+          </div>
+          <div class="px-5 py-3.5 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg shrink-0 flex items-center justify-center text-xs font-bold text-white" style="background:linear-gradient(135deg,#0284C7,#0EA5E9);">F</div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="text-sm font-semibold" style="color:#1B2A4A;">FinanceAI Suite</span>
+                <span class="text-xs text-surface-400">Finance</span>
+              </div>
+              <span class="text-xs text-surface-500">Forecasting &amp; anomaly detection · Cuts close cycle 40%</span>
+            </div>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#F0FDF9; color:#00C9A7;">✓ Verified</span>
+          </div>
+          <div class="px-5 py-3.5 flex items-center gap-3 opacity-50">
+            <div class="w-8 h-8 rounded-lg shrink-0 bg-surface-200"></div>
+            <div class="flex-1 h-4 bg-surface-100 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       4. FEATURES SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-50" id="features">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">Built for how businesses actually buy AI.</h2>
+        <p class="mt-4 text-lg text-surface-600 max-w-2xl mx-auto leading-relaxed">
+          Every feature was designed with one question: what do procurement teams, ops leaders, and founders actually need?
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">✅</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">Clairo Verified</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">Every tool passes our 12-point business readiness review. No unvetted submissions, no outdated listings.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">🎯</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">Outcome-Based Search</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">Find tools by what you want to achieve — not just what category they fall into. Results ranked by business impact.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">🏢</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">Enterprise &amp; SMB Filters</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">Filter for your company size, compliance requirements, and existing tech stack. No generic lists.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">📊</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">ROI Benchmarks</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">See real-world time savings, cost reduction data, and business size benchmarks before you commit to a trial.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">🗂️</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">Team Collections</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">Build shortlists, compare tools side-by-side, and share your vetted AI stack with your team or procurement lead.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="text-2xl mb-4">🔄</div>
+          <h3 class="font-bold text-base mb-2 font-display" style="color: #1B2A4A;">Always Current</h3>
+          <p class="text-sm text-surface-600 leading-relaxed">Our editorial team reviews and updates listings weekly. The AI landscape moves fast — so do we.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       5. CATEGORIES PREVIEW
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white" id="categories">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">Explore by business category.</h2>
+        <p class="mt-4 text-lg text-surface-600 max-w-xl mx-auto leading-relaxed">Every listing is classified by the business function it serves — not by technology type.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">⚙️</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Operations</h3>
+          <p class="text-xs text-surface-500 font-medium">48 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">📈</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Sales &amp; CRM</h3>
+          <p class="text-xs text-surface-500 font-medium">62 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">📣</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Marketing</h3>
+          <p class="text-xs text-surface-500 font-medium">71 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">💼</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Finance &amp; Accounting</h3>
+          <p class="text-xs text-surface-500 font-medium">35 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">👥</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">HR &amp; Recruiting</h3>
+          <p class="text-xs text-surface-500 font-medium">29 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">💬</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Customer Support</h3>
+          <p class="text-xs text-surface-500 font-medium">44 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">🛡️</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">IT &amp; Security</h3>
+          <p class="text-xs text-surface-500 font-medium">38 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border border-surface-200 bg-surface-50 block transition-all duration-200" style="text-decoration:none;" onmouseover="this.style.borderColor='#00C9A7'; this.style.background='rgba(0,201,167,0.04)'" onmouseout="this.style.borderColor=''; this.style.background=''">
+          <div class="text-2xl mb-3">⚖️</div>
+          <h3 class="font-semibold text-sm font-display mb-1" style="color: #1B2A4A;">Legal &amp; Compliance</h3>
+          <p class="text-xs text-surface-500 font-medium">22 tools <span style="color:#00C9A7;">→</span></p>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold transition-opacity hover:opacity-75" style="color: #00C9A7;">
+          Browse all 500+ tools
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       6. STATS BAR
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16" style="background-color: #1B2A4A;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-4xl font-bold font-display text-white mb-1">500+</p>
+          <p class="text-sm font-medium" style="color: rgba(255,255,255,0.55);">Curated AI Tools</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold font-display text-white mb-1">20</p>
+          <p class="text-sm font-medium" style="color: rgba(255,255,255,0.55);">Business Categories</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-display text-white mb-1">12-Point</p>
+          <p class="text-sm font-medium" style="color: rgba(255,255,255,0.55);">Vetting Rubric</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold font-display text-white mb-1">4.8<span style="color:#00C9A7;">★</span></p>
+          <p class="text-sm font-medium" style="color: rgba(255,255,255,0.55);">Avg. User Rating</p>
+        </div>
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       7. PRICING SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-surface-50" id="pricing">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">Simple pricing for every team.</h2>
+        <p class="mt-4 text-lg text-surface-600 max-w-xl mx-auto leading-relaxed">Start free. Upgrade when your team needs more power.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <!-- Free -->
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 shadow-sm flex flex-col">
+          <div class="mb-6">
+            <h3 class="font-bold text-lg font-display mb-1" style="color: #1B2A4A;">Free</h3>
+            <div class="flex items-end gap-1 mb-3">
+              <span class="text-4xl font-bold font-display" style="color: #1B2A4A;">$0</span>
+              <span class="text-surface-500 text-sm mb-1">/mo</span>
+            </div>
+            <p class="text-sm text-surface-600">Everything you need to explore and discover the right AI tools.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Browse all 500+ tools
+            </li>
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Basic filters &amp; search
+            </li>
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Save up to 5 tools
+            </li>
+          </ul>
+          <a href="#" class="w-full text-center py-3 rounded-xl font-semibold text-sm transition-colors duration-150 border border-surface-300 text-surface-700 hover:border-surface-500 block" style="text-decoration:none;">
+            Start Free
+          </a>
+        </div>
+
+        <!-- Team (Most Popular) -->
+        <div class="bg-white rounded-2xl p-7 flex flex-col relative shadow-xl" style="border: 2px solid #00C9A7;">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+            <span class="px-4 py-1 rounded-full text-xs font-bold text-white" style="background-color: #00C9A7;">Most Popular</span>
+          </div>
+          <div class="mb-6">
+            <h3 class="font-bold text-lg font-display mb-1" style="color: #1B2A4A;">Team</h3>
+            <div class="flex items-end gap-1 mb-3">
+              <span class="text-4xl font-bold font-display" style="color: #1B2A4A;">$49</span>
+              <span class="text-surface-500 text-sm mb-1">/mo</span>
+            </div>
+            <p class="text-sm text-surface-600">For teams evaluating and buying AI tools on a regular basis.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Unlimited saves &amp; team collections
+            </li>
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Advanced filters + compliance data
+            </li>
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Full ROI benchmark data
+            </li>
+            <li class="flex items-start gap-2 text-sm text-surface-700">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Priority support
+            </li>
+          </ul>
+          <a href="#" class="w-full text-center py-3 rounded-xl font-semibold text-sm text-white transition-opacity duration-150 hover:opacity-85 block" style="background-color: #00C9A7; text-decoration:none;">
+            Start Free Trial
+          </a>
+          <p class="text-center text-xs text-surface-500 mt-2">No credit card required.</p>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="rounded-2xl p-7 flex flex-col shadow-sm" style="background: linear-gradient(135deg, #1B2A4A 0%, #243755 100%); border: 1px solid rgba(255,255,255,0.10);">
+          <div class="mb-6">
+            <h3 class="font-bold text-lg font-display mb-1 text-white">Enterprise</h3>
+            <div class="flex items-end gap-1 mb-3">
+              <span class="text-3xl font-bold font-display text-white">Custom</span>
+            </div>
+            <p class="text-sm" style="color: rgba(255,255,255,0.60);">For procurement teams, large orgs, and multi-department rollouts.</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.80);">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              SSO / SAML authentication
+            </li>
+            <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.80);">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Custom vetting requests
+            </li>
+            <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.80);">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Procurement workflow integration
+            </li>
+            <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.80);">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Dedicated account manager
+            </li>
+            <li class="flex items-start gap-2 text-sm" style="color: rgba(255,255,255,0.80);">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" style="color:#00C9A7;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              API access
+            </li>
+          </ul>
+          <a href="mailto:enterprise@clairo.io" class="w-full text-center py-3 rounded-xl font-semibold text-sm transition-opacity duration-150 hover:opacity-85 block" style="border: 1px solid rgba(255,255,255,0.25); color: white; background: rgba(255,255,255,0.07); text-decoration:none;">
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       8. NEWSLETTER / CTA SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white" id="newsletter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display" style="color: #1B2A4A;">
+          Get weekly AI tool picks for your business.
+        </h2>
+        <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+          Every week, our editors surface the best new AI tools for enterprise and SMB teams — with business context, not just feature lists.
+        </p>
+        <form class="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="your@company.com"
+            class="flex-1 px-4 py-3 rounded-xl border border-surface-200 bg-surface-50 text-sm text-surface-900 placeholder-surface-400 focus:outline-none"
+            style="min-width:0;"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 rounded-xl font-semibold text-sm text-white transition-opacity duration-150 hover:opacity-85 shrink-0"
+            style="background-color: #00C9A7;"
+          >
+            Subscribe Free
+          </button>
+        </form>
+        <p class="mt-4 text-xs text-surface-500">Join 2,000+ business leaders. No spam, ever.</p>
+      </div>
+    </div>
+  </section>
+
 </Base>
